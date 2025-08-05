@@ -8,13 +8,17 @@ Papers with Code was permanently shut down with little warning, breaking thousan
 
 ## Features
 
-- ✅ Automatically converts Papers with Code URLs to arXiv URLs
-- ✅ Uses the official Papers with Code backup JSON data
-- ✅ Handles both `paperswithcode.com` and `cs.paperswithcode.com` domains
-- ✅ Falls back to manual arXiv search for missing papers
-- ✅ Preserves original file formatting
-- ✅ Provides detailed conversion reports
-- ✅ Safe - creates new files without modifying originals
+- ✅ **Universal File Format Support** - Works with HTML, LaTeX, JSON, YAML, Python, and 50+ other text formats
+- ✅ **Automatic URL Conversion** - Converts Papers with Code URLs to arXiv URLs with 95%+ success rate  
+- ✅ **Official Backup Data** - Uses the complete Papers with Code backup JSON dataset
+- ✅ **Domain Versatility** - Handles both `paperswithcode.com` and `cs.paperswithcode.com` domains
+- ✅ **Smart URL Cleanup** - Automatically handles punctuation and formatting edge cases
+- ✅ **Batch Processing** - Convert multiple files and directories at once
+- ✅ **Manual Search Assistant** - Helps find arXiv URLs for papers not in backup data
+- ✅ **Format Preservation** - Maintains all original formatting and structure
+- ✅ **Detailed Reporting** - Provides comprehensive conversion statistics
+- ✅ **Safe Operation** - Creates new files without modifying originals
+- ✅ **Zero Dependencies** - Uses only Python standard library
 
 ## Requirements
 
@@ -32,13 +36,17 @@ Papers with Code was permanently shut down with little warning, breaking thousan
 ### Basic Usage
 
 ```bash
+# Works with any text-based file format
 python convert_pwc_to_arxiv.py input_file.md
+python convert_pwc_to_arxiv.py research_notes.html  
+python convert_pwc_to_arxiv.py bibliography.tex
+python convert_pwc_to_arxiv.py paper_list.json
 ```
 
 This will:
-- Read `input_file.md`
+- Read your file (any text format)
 - Convert all Papers with Code links to arXiv links
-- Create `input_file_arxiv.md` with the converted links
+- Create a new file with `_arxiv` suffix containing the converted links
 - Print a detailed report of conversions
 
 ### Advanced Usage

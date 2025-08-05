@@ -1,0 +1,12 @@
+{
+  "papers": [
+    {
+      "title": "Attention",
+      "url": "https://arxiv.org/abs/1706.03762v5"
+    },
+    {
+      "title": "BERT", 
+      "url": "https://arxiv.org/abs/1810.04805v2"
+    }
+  ]
+}

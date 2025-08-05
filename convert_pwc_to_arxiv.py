@@ -71,13 +71,20 @@ def find_paperswithcode_urls(content: str) -> List[str]:
         List of unique Papers with Code URLs found
     """
     patterns = [
-        r'https?://paperswithcode\.com/paper/[^\s\)\]\>]+',
-        r'https?://cs\.paperswithcode\.com/paper/[^\s\)\]\>]+'
+        r'https?://paperswithcode\.com/paper/[^\s\)\]\>\"\'\;]+',
+        r'https?://cs\.paperswithcode\.com/paper/[^\s\)\]\>\"\'\;]+'
     ]
     
     urls = []
     for pattern in patterns:
-        urls.extend(re.findall(pattern, content))
+        found_urls = re.findall(pattern, content)
+        # Clean up URLs - remove common trailing characters that might be captured
+        cleaned_urls = []
+        for url in found_urls:
+            # Remove trailing punctuation that's not part of URLs
+            url = re.sub(r'[\"\';\)\]\>\,\.\!]+$', '', url)
+            cleaned_urls.append(url)
+        urls.extend(cleaned_urls)
     
     return list(set(urls))  # Remove duplicates
 
