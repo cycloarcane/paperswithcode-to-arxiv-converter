@@ -1,0 +1,25 @@
+# Papers with Code to arXiv Converter - Requirements
+# 
+# This package uses only Python standard library modules for maximum compatibility
+# No external dependencies required!
+#
+# Standard library modules used:
+# - json: JSON parsing and generation
+# - re: Regular expression operations
+# - sys: System-specific parameters and functions
+# - argparse: Command-line argument parsing
+# - pathlib: Object-oriented filesystem paths
+# - subprocess: Subprocess management
+# - urllib.parse: URL parsing utilities
+# - webbrowser: Web browser interface
+# - glob: Unix shell-style pathname pattern expansion
+# - typing: Type hints (Python 3.5+)
+
+# Optional: For enhanced functionality (not required for basic operation)
+# requests>=2.25.0    # For potential future web scraping features
+# beautifulsoup4>=4.9.0  # For potential HTML parsing features
+
+# Development dependencies (optional)
+# pytest>=6.0.0       # For running tests
+# black>=21.0.0       # For code formatting
+# flake8>=3.8.0       # For code linting
